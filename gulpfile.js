@@ -1,5 +1,6 @@
 var elixir = require('laravel-elixir');
-
+//var browserify = require('browserify');
+//global.jQuery = require('jquery');
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -11,6 +12,27 @@ var elixir = require('laravel-elixir');
  |
  */
 
+var path = {
+    sass:{
+        app:'app.scss'
+    },
+    js:{
+        app:'app.js',
+        backbone: 'backbone.min.js'
+    }
+}
+
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.sass(path.sass.app);
+});
+
+elixir(function(mix) {
+    mix.coffee();
+});
+
+elixir(function(mix) {
+    mix.scripts([
+        path.js.backbone,
+        path.js.app
+    ]);
 });
