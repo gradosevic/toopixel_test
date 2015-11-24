@@ -1,0 +1,17 @@
+@mixin transition($style) {
+  -webkit-transition: $style;
+  -moz-transition: $style;
+  -ms-transition: $style;
+  -o-transition: $style;
+}
+@mixin font-family-opensans($type){
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-#{$type}.ttf");
+}
+
+@mixin font-face-opensans($type){
+  @font-face {
+    @include font-family-opensans($type);
+    @content;
+  }
+}

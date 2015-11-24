@@ -8331,11 +8331,6 @@ button.close {
   }
 }
 
-/*.container .row > div:nth-child(odd) {
-  background: gray;
-
-}*/
-
 @font-face {
   font-family: "OpenSans";
   src: url("/fonts/OpenSans-Bold.ttf");

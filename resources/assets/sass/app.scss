@@ -1,21 +1,7 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-/*.container .row > div:nth-child(odd) {
-  background: gray;
-
-}*/
+@import "mixins";
 @import "font";
-
-@mixin transition($style) {
-  -webkit-transition: $style;
-  -moz-transition: $style;
-  -ms-transition: $style;
-  -o-transition: $style;
-}
-
-$color-gray: #292929;
-$color-lightgray: #777;
-$color-bread: #dca74c;
-$color-white: #f8f8f8;
+@import "colors";
 
 body {
   padding-top: 50px;
@@ -132,60 +118,4 @@ footer {
   margin: 2px;
 }
 
-@media only screen and (max-width: 600px) {
-  .bread {
-    width: 100%;
-  }
-  .row {
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-
-  .container-top {
-
-    .img-phone {
-      display: block;
-      max-width: 390px;
-    }
-  }
-  .bread {
-    width: initial;
-    margin-bottom: 10px;
-    img {
-      max-width: 220px;
-    }
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .no-padding {
-    padding: 0;
-  }
-  .container-top {
-    h1 {
-      font-size: 48px;
-    }
-  }
-  .bread {
-    margin-bottom: initial;
-    img {
-      max-width: 220px;
-    }
-  }
-
-}
-
-@media only screen and (min-width: 1200px) {
-  .container-top {
-    .img-phone {
-      max-width: initial;
-    }
-  }
-  .bread {
-    img {
-      max-width: initial;
-    }
-  }
-}
+@import "responsive";

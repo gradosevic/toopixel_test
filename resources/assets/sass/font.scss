@@ -1,15 +1,3 @@
-@mixin font-family-opensans($type){
-    font-family: "OpenSans";
-    src: url("/fonts/OpenSans-#{$type}.ttf");
-}
-
-@mixin font-face-opensans($type){
-  @font-face {
-    @include font-family-opensans($type);
-    @content;
-  }
-}
-
 @include font-face-opensans("Bold"){
   font-weight: bold;
 }
