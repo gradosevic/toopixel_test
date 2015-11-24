@@ -1,20 +1,29 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
 /*.container .row > div:nth-child(odd) {
   background: gray;
 
 }*/
+@import "font";
+
+@mixin transition($style) {
+  -webkit-transition: $style;
+  -moz-transition: $style;
+  -ms-transition: $style;
+  -o-transition: $style;
+}
+
+$color-gray: #292929;
+$color-lightgray: #777;
+$color-bread: #dca74c;
+$color-white: #f8f8f8;
 
 body {
   padding-top: 50px;
-}
-
-.no-padding {
-  padding: 0;
+  font-family: "OpenSans";
 }
 
 .top-margin {
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .top-margin-medium {
@@ -33,35 +42,150 @@ body {
   padding-bottom: 100px;
 }
 
+.container-top {
+  h1 {
+    font-weight: 200;
+    font-size: 37px;
+    color: $color-gray;
+  }
+  .introduction {
+    font-weight: 200;
+    font-size: 24px;
+    color: $color-lightgray;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .img-phone {
+    display: none;
+  }
+}
+
 .container-middle {
-  background: lightgray;
+  background: $color-white;
+  .row {
+    text-align: center;
+  }
   .header {
     text-align: center;
     padding: 60px 0;
+    h2 {
+      color: $color-gray;
+      font-weight: 200;
+      font-size: 36px;
+    }
+    .text {
+      font-size: 14px;
+      color: $color-lightgray;
+      p {
+        margin-bottom: 3px;
+      }
+    }
+  }
+  .bread {
+    .eye {
+      opacity: 0;
+      @include transition(opacity 1s ease-in-out);
+      position: absolute;
+    }
+    a:hover {
+      .eye {
+        @include transition(none);
+        position: absolute;
+        opacity: 1;
+      }
+    }
   }
 }
 
 .container-bottom {
-  background: gray;
+  background: $color-gray;
   .logo {
     text-align: center;
-    margin-left: -15px;
     margin-top: -30px;
   }
 }
 
 footer {
   text-align: center;
-  color: #fff;
+  color: white;
   h3 {
-    font-size: 32px;
+    font-size: 30px;
+    font-weight: bold;
+    color: $color-white;
   }
-  span {
+  p {
     font-style: italic;
     font-size: 16px;
+    color: $color-white;
+    a {
+      color: $color-bread;
+      &:hover {
+        color: $color-white;
+        text-decoration: underline;
+      }
+    }
   }
 }
 
 .content-bottom p {
   margin: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+  .bread {
+    width: 100%;
+  }
+  .row {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .container-top {
+
+    .img-phone {
+      display: block;
+      max-width: 390px;
+    }
+  }
+  .bread {
+    width: initial;
+    margin-bottom: 10px;
+    img {
+      max-width: 220px;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .no-padding {
+    padding: 0;
+  }
+  .container-top {
+    h1 {
+      font-size: 48px;
+    }
+  }
+  .bread {
+    margin-bottom: initial;
+    img {
+      max-width: 220px;
+    }
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .container-top {
+    .img-phone {
+      max-width: initial;
+    }
+  }
+  .bread {
+    img {
+      max-width: initial;
+    }
+  }
 }

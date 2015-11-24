@@ -1,0 +1,58 @@
+@mixin font-family-opensans($type){
+    font-family: "OpenSans";
+    src: url("/fonts/OpenSans-#{$type}.ttf");
+}
+
+@mixin font-face-opensans($type){
+  @font-face {
+    @include font-family-opensans($type);
+    @content;
+  }
+}
+
+@include font-face-opensans("Bold"){
+  font-weight: bold;
+}
+@include font-face-opensans("BoldItalic"){
+  font-weight: bold;
+  font-style: italic;
+}
+@include font-face-opensans("CondBold"){
+  font-weight: bold;
+  font-stretch: condensed;
+}
+@include font-face-opensans("CondLight"){
+  font-weight: 200;
+  font-stretch: condensed;
+}
+@include font-face-opensans("CondLightItalic"){
+  font-weight: 200;
+  font-stretch: condensed;
+  font-style:italic;
+}
+@include font-face-opensans("ExtraBold"){
+  font-weight: 800;
+}
+@include font-face-opensans("ExtraBoldItalic"){
+  font-weight: 800;
+  font-style: italic;
+}
+@include font-face-opensans("Italic"){
+  font-style: italic;
+}
+@include font-face-opensans("Light"){
+  font-weight: 200;
+}
+@include font-face-opensans("LightItalic"){
+  font-style: italic;
+  font-weight: 200;
+}
+@include font-face-opensans("Regular"){
+}
+@include font-face-opensans("SemiBold"){
+  font-weight: 600;
+}
+@include font-face-opensans("SemiBoldItalic"){
+  font-weight: 600;
+  font-style: italic;
+}

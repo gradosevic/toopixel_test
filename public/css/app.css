@@ -8336,16 +8336,98 @@ button.close {
 
 }*/
 
-body {
-  padding-top: 50px;
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-Bold.ttf");
+  font-weight: bold;
 }
 
-.no-padding {
-  padding: 0;
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-CondBold.ttf");
+  font-weight: bold;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-CondLight.ttf");
+  font-weight: 200;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-CondLightItalic.ttf");
+  font-weight: 200;
+  font-stretch: condensed;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-ExtraBold.ttf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-ExtraBoldItalic.ttf");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-Italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-Light.ttf");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-LightItalic.ttf");
+  font-style: italic;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/fonts/OpenSans-SemiBoldItalic.ttf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+body {
+  padding-top: 50px;
+  font-family: "OpenSans";
 }
 
 .top-margin {
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .top-margin-medium {
@@ -8364,8 +8446,32 @@ body {
   padding-bottom: 100px;
 }
 
+.container-top h1 {
+  font-weight: 200;
+  font-size: 37px;
+  color: #292929;
+}
+
+.container-top .introduction {
+  font-weight: 200;
+  font-size: 24px;
+  color: #777;
+}
+
+.container-top .text {
+  font-size: 14px;
+}
+
+.container-top .img-phone {
+  display: none;
+}
+
 .container-middle {
-  background: lightgray;
+  background: #f8f8f8;
+}
+
+.container-middle .row {
+  text-align: center;
 }
 
 .container-middle .header {
@@ -8373,30 +8479,128 @@ body {
   padding: 60px 0;
 }
 
+.container-middle .header h2 {
+  color: #292929;
+  font-weight: 200;
+  font-size: 36px;
+}
+
+.container-middle .header .text {
+  font-size: 14px;
+  color: #777;
+}
+
+.container-middle .header .text p {
+  margin-bottom: 3px;
+}
+
+.container-middle .bread .eye {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  position: absolute;
+}
+
+.container-middle .bread a:hover .eye {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  position: absolute;
+  opacity: 1;
+}
+
 .container-bottom {
-  background: gray;
+  background: #292929;
 }
 
 .container-bottom .logo {
   text-align: center;
-  margin-left: -15px;
   margin-top: -30px;
 }
 
 footer {
   text-align: center;
-  color: #fff;
+  color: white;
 }
 
 footer h3 {
-  font-size: 32px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f8f8f8;
 }
 
-footer span {
+footer p {
   font-style: italic;
   font-size: 16px;
+  color: #f8f8f8;
+}
+
+footer p a {
+  color: #dca74c;
+}
+
+footer p a:hover {
+  color: #f8f8f8;
+  text-decoration: underline;
 }
 
 .content-bottom p {
   margin: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+  .bread {
+    width: 100%;
+  }
+
+  .row {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container-top .img-phone {
+    display: block;
+    max-width: 390px;
+  }
+
+  .bread {
+    width: initial;
+    margin-bottom: 10px;
+  }
+
+  .bread img {
+    max-width: 220px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .no-padding {
+    padding: 0;
+  }
+
+  .container-top h1 {
+    font-size: 48px;
+  }
+
+  .bread {
+    margin-bottom: initial;
+  }
+
+  .bread img {
+    max-width: 220px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container-top .img-phone {
+    max-width: initial;
+  }
+
+  .bread img {
+    max-width: initial;
+  }
 }
