@@ -1,6 +1,4 @@
 var elixir = require('laravel-elixir');
-//var browserify = require('browserify');
-//global.jQuery = require('jquery');
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -25,21 +23,17 @@ var path = {
         jquery:'jquery.min.js',
         underscore: 'underscore.min.js',
         backbone: 'backbone.min.js',
-        app:'app.js'
+        app:'app.js',
+        coffeeCompiled: './public/js/coffee.js'
     },
     coffee:{
-        app: 'app.coffee'
+        app: 'coffee.coffee'
     }
 }
 
 elixir(function(mix) {
     mix.sass([
         path.sass.app,
-        path.sass.animations,
-        path.sass.colors,
-        path.sass.font,
-        path.sass.mixins,
-        path.sass.responsive
     ]);
 });
 
@@ -52,6 +46,7 @@ elixir(function(mix) {
         path.js.jquery,
         path.js.underscore,
         path.js.backbone,
-        path.js.app
+        path.js.app,
+        path.js.coffeeCompiled
     ]);
 });
