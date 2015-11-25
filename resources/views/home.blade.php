@@ -13,7 +13,7 @@
     </div>
     <div class="row top-margin">
         <div class="col-md-5 col-sm-7 col-xs-1 no-padding">
-            <img class="img-phone animation-element slide-left" src="/images/toopixel-phone-bread-dancer.jpg"
+            <img class="img-phone animation-element fade-in" src="/images/toopixel-phone-bread-dancer.jpg"
                  title="TooPixel featured image"
                  alt="TooPixel Featured image"/>
         </div>
