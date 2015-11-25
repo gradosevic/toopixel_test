@@ -14,24 +14,43 @@ var elixir = require('laravel-elixir');
 
 var path = {
     sass:{
-        app:'app.scss'
+        app:'app.scss',
+        animations: 'animations.scss',
+        colors: 'colors.scss',
+        font: 'font.scss',
+        mixins: 'mixins.scss',
+        responsive: 'responsive.scss'
     },
     js:{
-        app:'app.js',
-        backbone: 'backbone.min.js'
+        jquery:'jquery.min.js',
+        underscore: 'underscore.min.js',
+        backbone: 'backbone.min.js',
+        app:'app.js'
+    },
+    coffee:{
+        app: 'app.coffee'
     }
 }
 
 elixir(function(mix) {
-    mix.sass(path.sass.app);
+    mix.sass([
+        path.sass.app,
+        path.sass.animations,
+        path.sass.colors,
+        path.sass.font,
+        path.sass.mixins,
+        path.sass.responsive
+    ]);
 });
 
 elixir(function(mix) {
-    mix.coffee();
+    mix.coffee(path.coffee.app);
 });
 
 elixir(function(mix) {
     mix.scripts([
+        path.js.jquery,
+        path.js.underscore,
         path.js.backbone,
         path.js.app
     ]);

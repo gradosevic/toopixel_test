@@ -4,6 +4,13 @@
   -ms-transition: $style;
   -o-transition: $style;
 }
+@mixin translate($x, $y, $z){
+  -moz-transform: translate3d(#{$x}px, #{$y}px, #{$z}px);
+  -webkit-transform: translate3d(#{$x}px, #{$y}px, #{$z}px);
+  -o-transform: translate(#{$x}px, #{$y}px);
+  -ms-transform: translate(#{$x}px, #{$y}px);
+  transform: translate3d(#{$x}px, #{$y}px, #{$z}px);
+}
 @mixin font-family-opensans($type){
   font-family: "OpenSans";
   src: url("/fonts/OpenSans-#{$type}.ttf");
