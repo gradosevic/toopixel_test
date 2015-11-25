@@ -12,7 +12,7 @@
         <div class="col-md-10"></div>
     </div>
     <div class="row top-margin">
-        <div class="col-md-5 col-sm-7 no-padding">
+        <div class="col-md-5 col-sm-7 col-xs-1 no-padding">
             <img class="img-phone animation-element slide-left" src="/images/toopixel-phone-bread-dancer.jpg"
                  title="TooPixel featured image"
                  alt="TooPixel Featured image"/>
@@ -94,7 +94,7 @@
     <div class="row">
         <div class="col-md-12">
             <footer class="top-margin-large">
-                <h3 class="animation-element slide-right">Thank you for your time</h3>
+                <h3 class="animation-element slide-left">Thank you for your time</h3>
                 <p>Or you can contact us at: <a href="mailto:info@ibread.com" title="Contact Us">info@ibread.com</a>
                 </p>
             </footer>
