@@ -1,6 +1,36 @@
 @media only screen and (max-width: 600px) {
-  .bread {
-    width: 100%;
+  .container-top{
+    h1{
+      font-size: 36px;
+    }
+    .introduction{
+      font-size:18px;
+    }
+
+    .text{
+      color: #777;
+      text-align: left;
+    }
+  }
+  .container-middle {
+    .bread {
+      width: 100%;
+    }
+    .header{
+      h2{
+        font-size:32px;
+      }
+    }
+  }
+  .container-bottom{
+    footer{
+      h3{
+        font-size: 24px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
   }
   .row {
     text-align: center;
