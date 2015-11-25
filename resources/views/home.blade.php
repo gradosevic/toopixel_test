@@ -94,7 +94,7 @@
     <div class="row">
         <div class="col-md-12">
             <footer class="top-margin-large">
-                <h3 class="animation-element fade-in">Thank you for your time</h3>
+                <h3>Thank you for your time</h3>
                 <p>Or you can contact us at: <a href="mailto:info@ibread.com" title="Contact Us">info@ibread.com</a>
                 </p>
             </footer>
